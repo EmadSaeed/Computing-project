@@ -1,10 +1,8 @@
 import React from 'react'
 
-const App = () => {
+function App() {
   return (
-    <div>
-      <h1>Monolithic Frontend</h1>
-    </div>
+    <div>App</div>
   )
 }
 
