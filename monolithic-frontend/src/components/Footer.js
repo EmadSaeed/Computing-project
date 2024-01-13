@@ -1,8 +1,19 @@
 import React from 'react'
+import { Container, Row, Col } from 'react-bootstrap'
 
 function Footer() {
+
+    const currentYear = new Date().getFullYear();
     return (
-        <div>Footer</div>
+        <footer>
+            <Container>
+                <Row>
+                    <Col className="text-center py-3">
+                        <p>Computing Project &copy; {currentYear}</p>
+                    </Col>
+                </Row>
+            </Container>
+        </footer>
     )
 }
 
