@@ -5,11 +5,13 @@ import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } 
 import './index.css';
 import App from './App';
 import HomePage from './components/pages/HomePage';
+import ProductPage from './components/pages/ProductPage';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<App />} >
       <Route index={true} path='/' element={<HomePage />} />
+      <Route path='/product/:id' element={<ProductPage />} />
     </Route>
   ),
 );

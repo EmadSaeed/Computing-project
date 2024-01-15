@@ -11,7 +11,7 @@ function Product({ product }) {
             <Card.Body>
                 <Link to={`/product/${product._id}`}>
                     <Card.Title as='div'>
-                        <strong>{product.name}</strong>
+                        <strong style={{ color: '#000' }}>{product.productName}</strong>
                     </Card.Title>
                 </Link>
 

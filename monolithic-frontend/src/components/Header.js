@@ -7,10 +7,10 @@ import { LinkContainer } from 'react-router-bootstrap';
 function Header() {
     return (
         <header>
-            <Navbar bg="primary" variant="dark" expand="lg" collapseOnSelect>
+            <Navbar style={{ background: '#faeccc' }} expand="lg" collapseOnSelect>
                 <Container>
                     <LinkContainer to='/'>
-                        <Navbar.Brand>Monolithic Shop</Navbar.Brand>
+                        <h1 className='fs-2'>Monolithic Shop</h1>
                     </LinkContainer>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav" >
