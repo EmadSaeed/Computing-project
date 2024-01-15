@@ -2,18 +2,25 @@ import React from 'react';
 import { Container, Navbar, Nav } from 'react-bootstrap';
 import { IoMdCart } from "react-icons/io";
 import { FaUserAlt } from "react-icons/fa";
+import { LinkContainer } from 'react-router-bootstrap';
 
 function Header() {
     return (
         <header>
             <Navbar bg="primary" variant="dark" expand="lg" collapseOnSelect>
                 <Container>
-                    <Navbar.Brand href="/home">Monolithic Shop</Navbar.Brand>
+                    <LinkContainer to='/'>
+                        <Navbar.Brand>Monolithic Shop</Navbar.Brand>
+                    </LinkContainer>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav" >
                         <Nav className="ms-auto">
-                            <Nav.Link href="/basket"><IoMdCart /> Basket</Nav.Link>
-                            <Nav.Link href="/login"><FaUserAlt />Login</Nav.Link>
+                            <LinkContainer to='/basket'>
+                                <Nav.Link><IoMdCart /> Basket</Nav.Link>
+                            </LinkContainer>
+                            <LinkContainer to='/login'>
+                                <Nav.Link><FaUserAlt />Login</Nav.Link>
+                            </LinkContainer>
                         </Nav>
                     </Navbar.Collapse>
                 </Container>
