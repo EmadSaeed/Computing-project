@@ -8,7 +8,7 @@ function ProductPage() {
     console.log(product.productName)
     return (
         <>
-            <Link to="/" className='btn btn-light my-3'>Home</Link>
+            <Link to="/" className='btn btn-light my-3'>Home /</Link>
             <Row>
                 <Col md={6}><Image src={product.image} alt={product.productName} fluid /></Col>
                 <Col md={6}>
