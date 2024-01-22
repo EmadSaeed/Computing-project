@@ -1,7 +1,7 @@
 #!/usr/bin/env node
-
-const cdk = require('aws-cdk-lib');
-const { ServerlessBackendStack } = require('../lib/serverless-backend-stack');
+import 'source-map-support/register';
+import * as cdk from 'aws-cdk-lib';
+import { ServerlessBackendStack } from '../lib/serverless-backend-stack';
 
 const app = new cdk.App();
 new ServerlessBackendStack(app, 'ServerlessBackendStack', {
