@@ -15,5 +15,19 @@ export class ServerlessBackendStack extends cdk.Stack {
       removalPolicy: cdk.RemovalPolicy.DESTROY,
       billingMode: dynamodb.BillingMode.PAY_PER_REQUEST,
     });
+
+    const productsFunction = new NodejsFunction(this, "ProductsFunction", {
+      entry: join(__dirname, `/../src/products/index.ts`),
+      bundling: {
+        externalModules: ["aws-sdk"],
+      },
+      environment: {
+        PRIMARY_KEY: "id",
+        DYNAMODB_TABLE_NAME: productsTable.tableName,
+      },
+      runtime: Runtime.NODEJS_18_X,
+    });
+
+    productsTable.grantReadWriteData(productsFunction);
   }
 }
